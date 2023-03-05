@@ -1,0 +1,30 @@
+{% extends "admindashboard.html" %}
+
+
+{% block title %}PMC - Add Company{% endblock %}
+
+{% block admincontent %}
+<div class="addcompany_main">
+	<div class="addcompany_main_top">
+		<input class="addcompany_main_top_search" placeholder="Search company"/>
+		<button class="addcompany_main_top_addcompany">Add Company</button>
+	</div>
+	<div class="addcompany_main_middle"></div>
+	<div class="addcompany_main_bottom">
+		{% for row, employee in items %}
+		<div class="tableMain">
+			<div class="tableMain_data">
+				<p class="tableMain_CompanyName">{{ row }}</p>
+				<p class="tableMain_Employees"><i>Total Active Employees:</i> &nbsp <b>{{ employee }}</b></p>
+			</div>
+			<div class=tableMain_buttons>
+				<button>DELETE</button>
+			</div>
+		</div>
+		{% endfor %}
+	</div>
+	<div class="pagination">
+		{{pagination.links}}
+	</div>
+</div>
+{% endblock admincontent%}

@@ -1,0 +1,25 @@
+{% extends "register_base.html" %}
+
+
+{% block title %}PMC - Register Email{% endblock %}
+
+
+{% block content %}
+<div class="registerframe">
+	<div class="register_title"><h1>Registration by Email</h1></div>
+	<form class="register_form" method="POST">
+		<input type="text" class="first_name" placeholder="First Name" id="f_name" name="first_name" required/>
+		<input type="text" class="last_name" placeholder="Last Name" id="l_name" name="last_name" required/>
+		<input type="text" class="user_email" placeholder="Email" id="u_email" name="user_email" required/>
+		<input type="text" class="username" placeholder="Username" id="u_name" name="username" required/>
+		<input type="password" class="user_password" placeholder="Password" id="u_password" name="user_password" required/>
+		<input type="password" class="user_password" placeholder="Repeat Password" id="r_password" name="repeat_password" required/>
+	</form>
+	<div class="register_page_buttons">
+		<button type="submit" class="cancel_button" onclick="window.location.href='{{url_for('pmc_register.register_cancel')}}'">Cancel</button>
+		<button type="submit" class="register_button" onclick="window.location.href='{{url_for('pmc_register.register_email')}}'">Register</button>
+	</div>
+</div>
+{% endblock content %}
+
+

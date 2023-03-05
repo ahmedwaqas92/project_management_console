@@ -1,0 +1,196 @@
+/* #### Standard Features ####  */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+/*    border: 1px solid red;*/
+}
+
+html , body {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #C9DAFC;
+    margin: 0;
+    padding: 0;
+
+}
+
+.registerframe {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+    min-height: 50vh;
+    min-width: 50vh;
+    background-color: #CFE4FC;
+    box-shadow: 12px 12px 4px rgba(0, 0, 0, 0.25);
+}
+
+.register_title {
+    display: flex;
+    flex-direction: row;
+    position: ;
+    margin: 0;
+    padding: 0;
+}
+
+.register_title h1 {
+    font-family: "Arial";
+    font-style: bold;
+/*    color: #2C5695;*/
+    color: #000000;
+    font-weight: 1000;
+    font-size: 3vh;
+    line-height: 7vh;
+    padding-top: 5%;
+}
+
+
+.register_form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    padding-top: 1vh;
+
+}
+
+.first_name {
+    display: flex;
+    flex-direction: row;
+    height: 5vh;
+    width: 20vw;
+    border-radius: 10vw;
+    border: 1px solid;
+    padding-left: 1vw;
+    margin-top: 5%;
+}
+
+.last_name {
+    display: flex;
+    flex-direction: row;
+    height: 5vh;
+    width: 20vw;
+    border-radius: 10vw;
+    border: 1px solid;
+    padding-left: 1vw;
+    margin-top: 5%;
+}
+
+.user_email {
+    display: flex;
+    flex-direction: row;
+    height: 5vh;
+    width: 20vw;
+    border-radius: 10vw;
+    border: 1px solid;
+    padding-left: 1vw;
+    margin-top: 5%;
+}
+
+.username {
+    display: flex;
+    flex-direction: row;
+    height: 5vh;
+    width: 20vw;
+    border-radius: 10vw;
+    border: 1px solid;
+    padding-left: 1vw;
+    margin-top: 5%;
+}
+
+.user_password {
+    display: flex;
+    flex-direction: row;
+    height: 5vh;
+    width: 20vw;
+    border-radius: 10vw;
+    border: 1px solid;
+    padding-left: 1vw;
+    margin-top: 5%;
+}
+
+.register_page_buttons {
+    display: flex;
+    flex-direction: row;
+    margin: 0;
+    padding-top: 3vh;
+    padding-bottom: 1.5vh;
+    gap: 30%;
+}
+
+.cancel_button {
+    display: flex;
+    flex-direction: row;
+    margin-top: 1%;
+    justify-content: center;
+    height: 4vh;
+    width: 10vw;
+    border-radius: 20vw;
+    border: 1px solid;
+    border-color: #4A92FF;
+    color: #FFFFFF;
+    font-weight: bolder;
+    font-size: 3vh;
+    background-color: #4A92FF;
+    -webkit-transition: .3s ease-in-out;
+    transition: .3s ease-in-out;
+}
+
+.cancel_button:hover {
+    display: flex;
+    flex-direction: row;
+    margin-top: 1%;
+    justify-content: center;
+    height: 5vh;
+    width: 10vw;
+    border-radius: 20vw;
+    border: 1px solid;
+    border-color: #eb3434;
+    color: #000000;
+    font-weight: bolder;
+    font-size: 3vh;
+    background-color: #eb3434;
+}
+
+.register_button {
+    display: flex;
+    flex-direction: row;
+    margin-top: 1%;
+    justify-content: center;
+    height: 4vh;
+    width: 10vw;
+    border-radius: 20vw;
+    border: 1px solid;
+    border-color: #4A92FF;
+    color: #FFFFFF;
+    font-weight: bolder;
+    font-size: 3vh;
+    background-color: #4A92FF;
+    -webkit-transition: .3s ease-in-out;
+    transition: .3s ease-in-out;
+}
+
+.register_button:hover {
+    display: flex;
+    flex-direction: row;
+    margin-top: 1%;
+    justify-content: center;
+    height: 5vh;
+    width: 10vw;
+    border-radius: 20vw;
+    border: 1px solid;
+    border-color: #3ac280;
+    color: #000000;
+    font-weight: bolder;
+    font-size: 3vh;
+    background-color: #3ac280;
+}
+}

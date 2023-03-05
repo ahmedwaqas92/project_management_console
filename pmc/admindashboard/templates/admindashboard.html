@@ -1,0 +1,25 @@
+{% extends "admindashboard_base.html" %}
+
+
+{% block title %}PMC - Admin Dashboard{% endblock %}
+
+
+{% block content %}
+<div class="admindashboard_up">
+	<p>Log Out</p>
+	<img src="{{url_for('static', filename='/images/pmc/admindashboard/logout.png')}}" alt="Logout" onclick="window.location.href='{{url_for('pmc_admindashboard.logout')}}'"/>
+</div>
+<div class="admindashboard_down">
+	<div class="admindashboard_down_left">
+		<img src="{{url_for('static', filename='/images/pmc/admindashboard/dashboard.png')}}" alt="dashboard" onclick="window.location.href='{{url_for('pmc_admindashboard.admin_successfulLogin')}}'"/>
+		<img src="{{url_for('static', filename='/images/pmc/admindashboard/addcompany.png')}}" alt="addcompany" onclick="window.location.href='{{url_for('pmc_admindashboard.add_company')}}'"/>
+		<img src="{{url_for('static', filename='/images/pmc/admindashboard/addemployee.png')}}" alt="addemployee" onclick="window.location.href='{{url_for('pmc_admindashboard.add_employee')}}'"/>
+		<img src="{{url_for('static', filename='/images/pmc/admindashboard/reports.png')}}" alt="reports" onclick="window.location.href='{{url_for('pmc_admindashboard.reports')}}'"/>
+		<img src="{{url_for('static', filename='/images/pmc/admindashboard/backup.png')}}" alt="backup" onclick="window.location.href='{{url_for('pmc_admindashboard.backup')}}'"/>
+		<img src="{{url_for('static', filename='/images/pmc/admindashboard/profile.png')}}" alt="profile" onclick="window.location.href='{{url_for('pmc_admindashboard.profile')}}'"/>
+	</div>
+	<div class="admindashboard_down_right">
+		{% block admincontent %}{% endblock admincontent %}
+	</div>
+</div>
+{% endblock content %}

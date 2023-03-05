@@ -1,0 +1,71 @@
+{% extends "base.html" %}
+
+
+{% block title %}PMC - Home{% endblock %}
+
+
+{% block content %}
+<div class="modal" style="display:{{'block' if noUserActive_modal else 'none'}}">
+	<div class="modal-content">
+		<p class="ip_promptline1">User status is inactive</p>
+		<p class="ip_promptline2">Please contact your Administrator</p>
+		<button type="submit" class="ip_button" onclick="window.location.href='{{url_for('pmc_landing.home')}}'">Try Again</button>
+	</div>
+</div>
+<div class="modal" style="display:{{'block' if incorrectPass_modal else 'none'}}">
+	<div class="modal-content">
+		<p class="ip_promptline1">You have entered an incorrect Password</p>
+		<p class="ip_promptline2">Please try again</p>
+		<button type="submit" class="ip_button" onclick="window.location.href='{{url_for('pmc_landing.home')}}'">Try Again</button>
+	</div>
+</div>
+<div class="modal" style="display:{{'block' if noUsername_OrEmail else 'none'}}">
+	<div class="modal-content">
+		<p class="ip_promptline1">Entered Username or Email Does not Exist</p>
+		<p class="ip_promptline2">Please try again</p>
+		<button type="submit" class="ip_button" onclick="window.location.href='{{url_for('pmc_landing.home')}}'">Try Again</button>
+	</div>
+</div>
+<div class="modal" style="display:{{'block' if noUserCategory else 'none'}}">
+	<div class="modal-content">
+		<p class="ip_promptline1">No Such User Category Exists</p>
+		<p class="ip_promptline2">Please try again</p>
+		<button type="submit" class="ip_button" onclick="window.location.href='{{url_for('pmc_landing.home')}}'">Try Again</button>
+	</div>
+</div>
+<div class="landingframe">
+	<div class="top">
+		<h1>Project Management Console</h1>
+	</div>
+	<div class="bottom">
+		<div class="bottom_left">
+			<img src="{{url_for('static', filename='/images/pmc/landing/landingPageImage.png')}}"/>
+		</div>
+		<div class="bottom_middle"></div>
+		<div class="bottom_right">
+			<form class="bottom_right_form" method="POST">
+				<input type="text" class="bottom_right_form_username" placeholder="Username or Email" id="uname_email" name="username_email" required/>
+				<input type="password" class="bottom_right_form_password" placeholder="Password" id="pwd" name="password" required/>
+				<input type="submit" class="bottom_right_form_login" value="Log In"/>
+			</form>
+			<a href="{{url_for('pmc_landing.password_reset')}}"><p>Forgot your password? Click here</p></a>
+			<div class="bottom_right_divider">
+				<hr>
+				<p>Or sign up using</p>
+				<hr>
+			</div>
+			<div class="bottom_right_signups">
+				<div class="bottom_right_signups_facebook">
+					<img src="{{url_for('static', filename='/images/pmc/landing/facebook.png')}}" alt="facebook" onclick="window.location.href='{{url_for('pmc_landing.register_facebook')}}'"/>
+				</div>
+				<div class="bottom_right_signups_google">
+					<img src="{{url_for('static', filename='/images/pmc/landing/google.png')}}" alt="google" onclick="window.location.href='{{url_for('pmc_landing.register_google')}}'"/>
+				</div>
+				<div class="bottom_right_signups_email">
+					<img src="{{url_for('static', filename='/images/pmc/landing/email.png')}}" alt="email" onclick="window.location.href='{{url_for('pmc_landing.register_email')}}'" />
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+{% endblock content %}
