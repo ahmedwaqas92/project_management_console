@@ -31,6 +31,11 @@ password_emails = []
 sending_email = []
 
 
+@pmc_landing.route("/")
+def landing():
+    return redirect(url_for("pmc_landing.home"))
+
+
 @pmc_landing.route("/home", methods=["GET", "POST"])
 def home():
     if request.method == "POST":
